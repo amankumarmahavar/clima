@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:clima/screens/city_screen.dart';
 import 'package:clima/services/weather.dart';
 import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
@@ -25,19 +26,16 @@ class _LocationScreenState extends State<LocationScreen> {
     if (data == null) {
       temp = 0;
       city = '';
-      weatherIcon = 'Error';
+      weatherIcon = '⚠';
       weatherMsg = 'Unable to get Weather Data';
-    }
-    else{
+    } else {
       id = data['weather'][0]['id'];
       city = data['name'];
       temp = data['main']['temp'].toInt();
       weatherIcon = WeatherModel().getWeatherIcon(id);
       weatherMsg = WeatherModel().getMessage(temp);
     }
-    setState(() {
-      print('$id  $city $temp');
-    });
+    setState(() {});
   }
 
   @override
@@ -63,7 +61,8 @@ class _LocationScreenState extends State<LocationScreen> {
                 children: <Widget>[
                   TextButton(
                     onPressed: () async {
-                      var weatherData = await WeatherModel().getWeatherData();
+                      var weatherData =
+                          await WeatherModel().getLocationWeatherData();
                       updateUI(weatherData);
                     },
                     child: Icon(
@@ -72,7 +71,21 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      var cityName = await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return CityScreen();
+                          },
+                        ),
+                      );
+                      if (cityName != '') {
+                        var data =
+                            await WeatherModel().getCityWeateherData(cityName);
+                        updateUI(data);
+                      }
+                    },
                     child: Icon(
                       Icons.location_city,
                       size: 50.0,
@@ -110,8 +123,3 @@ class _LocationScreenState extends State<LocationScreen> {
     );
   }
 }
-
-// var id = jsonDecode(data)['weather'][0]['id'];
-    // var city = jsonDecode(data)['name'];
-    // var temp = jsonDecode(data)['main']['temp'];
-    // print('$id $city $temp');

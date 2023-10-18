@@ -10,6 +10,11 @@ const kMessageTextStyle = TextStyle(
   fontSize: 60.0,
 );
 
+const kLoadingTextStyle = TextStyle(
+  fontFamily: 'Spartan MB',
+  fontSize: 50.0,
+);
+
 const kButtonTextStyle = TextStyle(
   fontSize: 30.0,
   fontFamily: 'Spartan MB',

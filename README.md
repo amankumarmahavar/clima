@@ -1,16 +1,51 @@
-# clima
+# Clima
 
-A new Flutter project.
+Welcome to the Live Location Weather App! ☁️🌍
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+This app allows users to check real-time weather conditions based on their live location. Stay informed about the weather anywhere in the world with this user-friendly and intuitive application.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Live Location Tracking**: Automatically fetches and displays weather data for the user's current location.
+- **Detailed Weather Information**: Provides real-time updates on temperature, humidity, wind speed, and more.
+- **Interactive Map**: View the location on an interactive map with weather overlays.
+- **Search Functionality**: Search for weather information in specific locations around the globe.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+
+**Clone the Repository:**
+
+```bash
+  git clone https://github.com/amankumarmahavar/clima.git
+  cd snake-game
+```
+    
+**Check for flutter setup and connected devices**
+  ```bash
+  Flutter doctor
+```  
+
+**Get all the dependencies using**
+```bash
+  flutter pub get
+```
+
+**Run the app**
+```bash
+  flutter run
+```
+## Screenshots
+<img src="https://github.com/amankumarmahavar/clima/blob/main/ss/clima1.jpg" width="49%"/> <img src="https://github.com/amankumarmahavar/clima/blob/main/ss/clima2.jpg" width="49%"/> 
+https://github.com/amankumarmahavar/cryptoeed/blob/main/ss/cryptoeed1.jpg?raw=true
+
+## Authors
+
+- [@amanmahavar](https://github.com/amankumarmahavar)
+
+
+## Credits 
+
+- [@londonappbrewery](https://github.com/londonappbreweryr)
+

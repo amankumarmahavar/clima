@@ -38,7 +38,7 @@ This app allows users to check real-time weather conditions based on their live 
 ```
 ## Screenshots
 <img src="https://github.com/amankumarmahavar/clima/blob/main/ss/clima1.jpg" width="49%"/> <img src="https://github.com/amankumarmahavar/clima/blob/main/ss/clima2.jpg" width="49%"/> 
-https://github.com/amankumarmahavar/cryptoeed/blob/main/ss/cryptoeed1.jpg?raw=true
+
 
 ## Authors
 
